@@ -1,113 +1,206 @@
 <svg width="800" height="140" viewBox="0 0 800 140" xmlns="http://www.w3.org/2000/svg">
   <defs>
     <style>
-      @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;600;700&amp;family=DM+Mono&amp;display=swap');
+      @import url('https://fonts.googleapis.com/css2?family=Syne:wght@700;800&amp;family=Space+Mono&amp;display=swap');
 
-      .greeting { font-family: 'DM Sans', 'Segoe UI', sans-serif; font-size: 13px; font-weight: 400; fill: #94a3b8; letter-spacing: 3px; }
-      .name     { font-family: 'DM Sans', 'Segoe UI', sans-serif; font-size: 36px; font-weight: 700; fill: #0f172a; }
-      .cursor   { fill: #3b82f6; animation: blink 0.8s step-end infinite; }
+      .bg-rect { fill: #0a0a0f; }
 
-      @keyframes blink { 0%,100%{opacity:1;} 50%{opacity:0;} }
+      .greeting {
+        font-family: 'Space Mono', 'Courier New', monospace;
+        font-size: 10px;
+        font-weight: 400;
+        fill: #4ade80;
+        letter-spacing: 5px;
+      }
+
+      .name {
+        font-family: 'Syne', 'Georgia', serif;
+        font-size: 38px;
+        font-weight: 800;
+        fill: #f8fafc;
+        letter-spacing: -1px;
+      }
+
+      .name-accent {
+        fill: url(#nameGrad);
+      }
+
+      .tw-base {
+        font-family: 'Space Mono', 'Courier New', monospace;
+        font-size: 12px;
+        fill: #94a3b8;
+        letter-spacing: 2px;
+      }
+
+      .prompt-symbol {
+        font-family: 'Space Mono', 'Courier New', monospace;
+        font-size: 12px;
+        fill: #4ade80;
+        letter-spacing: 2px;
+      }
+
+      .cursor {
+        fill: #4ade80;
+        animation: blink 1s step-end infinite;
+      }
+
+      @keyframes blink {
+        0%,100% { opacity: 1; }
+        50%      { opacity: 0; }
+      }
 
       .tw1,.tw2,.tw3,.tw4,.tw5 {
-        font-family: 'DM Mono', 'Courier New', monospace;
-        font-size: 14px;
-        fill: #3b82f6;
-        letter-spacing: 1px;
+        font-family: 'Space Mono', 'Courier New', monospace;
+        font-size: 12px;
+        fill: #e2e8f0;
+        letter-spacing: 2px;
       }
 
       .tw1 { animation: tw1 50s linear infinite; }
       @keyframes tw1 {
-        0%    { clip-path: inset(0 100% 0 0); opacity: 1; }
-        6%    { clip-path: inset(0 0% 0 0);   opacity: 1; }
-        18%   { clip-path: inset(0 0% 0 0);   opacity: 1; }
-        20%   { clip-path: inset(0 100% 0 0); opacity: 0; }
-        100%  { clip-path: inset(0 100% 0 0); opacity: 0; }
+        0%   { clip-path: inset(0 100% 0 0); opacity:1; }
+        6%   { clip-path: inset(0 0% 0 0);   opacity:1; }
+        18%  { clip-path: inset(0 0% 0 0);   opacity:1; }
+        20%  { clip-path: inset(0 100% 0 0); opacity:0; }
+        100% { clip-path: inset(0 100% 0 0); opacity:0; }
       }
       .tw2 { animation: tw2 50s linear infinite; }
       @keyframes tw2 {
-        0%    { clip-path: inset(0 100% 0 0); opacity: 0; }
-        20%   { clip-path: inset(0 100% 0 0); opacity: 0; }
-        20.1% { clip-path: inset(0 100% 0 0); opacity: 1; }
-        26%   { clip-path: inset(0 0% 0 0);   opacity: 1; }
-        38%   { clip-path: inset(0 0% 0 0);   opacity: 1; }
-        40%   { clip-path: inset(0 100% 0 0); opacity: 0; }
-        100%  { clip-path: inset(0 100% 0 0); opacity: 0; }
+        0%    { clip-path: inset(0 100% 0 0); opacity:0; }
+        20%   { clip-path: inset(0 100% 0 0); opacity:0; }
+        20.1% { clip-path: inset(0 100% 0 0); opacity:1; }
+        26%   { clip-path: inset(0 0% 0 0);   opacity:1; }
+        38%   { clip-path: inset(0 0% 0 0);   opacity:1; }
+        40%   { clip-path: inset(0 100% 0 0); opacity:0; }
+        100%  { clip-path: inset(0 100% 0 0); opacity:0; }
       }
       .tw3 { animation: tw3 50s linear infinite; }
       @keyframes tw3 {
-        0%    { clip-path: inset(0 100% 0 0); opacity: 0; }
-        40%   { clip-path: inset(0 100% 0 0); opacity: 0; }
-        40.1% { clip-path: inset(0 100% 0 0); opacity: 1; }
-        46%   { clip-path: inset(0 0% 0 0);   opacity: 1; }
-        58%   { clip-path: inset(0 0% 0 0);   opacity: 1; }
-        60%   { clip-path: inset(0 100% 0 0); opacity: 0; }
-        100%  { clip-path: inset(0 100% 0 0); opacity: 0; }
+        0%    { clip-path: inset(0 100% 0 0); opacity:0; }
+        40%   { clip-path: inset(0 100% 0 0); opacity:0; }
+        40.1% { clip-path: inset(0 100% 0 0); opacity:1; }
+        46%   { clip-path: inset(0 0% 0 0);   opacity:1; }
+        58%   { clip-path: inset(0 0% 0 0);   opacity:1; }
+        60%   { clip-path: inset(0 100% 0 0); opacity:0; }
+        100%  { clip-path: inset(0 100% 0 0); opacity:0; }
       }
       .tw4 { animation: tw4 50s linear infinite; }
       @keyframes tw4 {
-        0%    { clip-path: inset(0 100% 0 0); opacity: 0; }
-        60%   { clip-path: inset(0 100% 0 0); opacity: 0; }
-        60.1% { clip-path: inset(0 100% 0 0); opacity: 1; }
-        66%   { clip-path: inset(0 0% 0 0);   opacity: 1; }
-        78%   { clip-path: inset(0 0% 0 0);   opacity: 1; }
-        80%   { clip-path: inset(0 100% 0 0); opacity: 0; }
-        100%  { clip-path: inset(0 100% 0 0); opacity: 0; }
+        0%    { clip-path: inset(0 100% 0 0); opacity:0; }
+        60%   { clip-path: inset(0 100% 0 0); opacity:0; }
+        60.1% { clip-path: inset(0 100% 0 0); opacity:1; }
+        66%   { clip-path: inset(0 0% 0 0);   opacity:1; }
+        78%   { clip-path: inset(0 0% 0 0);   opacity:1; }
+        80%   { clip-path: inset(0 100% 0 0); opacity:0; }
+        100%  { clip-path: inset(0 100% 0 0); opacity:0; }
       }
       .tw5 { animation: tw5 50s linear infinite; }
       @keyframes tw5 {
-        0%    { clip-path: inset(0 100% 0 0); opacity: 0; }
-        80%   { clip-path: inset(0 100% 0 0); opacity: 0; }
-        80.1% { clip-path: inset(0 100% 0 0); opacity: 1; }
-        86%   { clip-path: inset(0 0% 0 0);   opacity: 1; }
-        98%   { clip-path: inset(0 0% 0 0);   opacity: 1; }
-        100%  { clip-path: inset(0 100% 0 0); opacity: 0; }
+        0%    { clip-path: inset(0 100% 0 0); opacity:0; }
+        80%   { clip-path: inset(0 100% 0 0); opacity:0; }
+        80.1% { clip-path: inset(0 100% 0 0); opacity:1; }
+        86%   { clip-path: inset(0 0% 0 0);   opacity:1; }
+        98%   { clip-path: inset(0 0% 0 0);   opacity:1; }
+        100%  { clip-path: inset(0 100% 0 0); opacity:0; }
       }
     </style>
 
-    <linearGradient id="topBar" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%"   stop-color="#3b82f6" stop-opacity="0"/>
-      <stop offset="40%"  stop-color="#3b82f6" stop-opacity="0.8"/>
-      <stop offset="60%"  stop-color="#6366f1" stop-opacity="0.8"/>
-      <stop offset="100%" stop-color="#6366f1" stop-opacity="0"/>
+    <!-- name gradient -->
+    <linearGradient id="nameGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%"   stop-color="#f8fafc"/>
+      <stop offset="60%"  stop-color="#f8fafc"/>
+      <stop offset="100%" stop-color="#4ade80"/>
     </linearGradient>
 
-    <linearGradient id="bottomLine" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%"   stop-color="#e2e8f0" stop-opacity="0"/>
-      <stop offset="20%"  stop-color="#e2e8f0" stop-opacity="1"/>
-      <stop offset="80%"  stop-color="#e2e8f0" stop-opacity="1"/>
-      <stop offset="100%" stop-color="#e2e8f0" stop-opacity="0"/>
+    <!-- top bar gradient -->
+    <linearGradient id="topBar" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%"   stop-color="#4ade80" stop-opacity="0"/>
+      <stop offset="30%"  stop-color="#4ade80" stop-opacity="1"/>
+      <stop offset="70%"  stop-color="#22d3ee" stop-opacity="1"/>
+      <stop offset="100%" stop-color="#22d3ee" stop-opacity="0"/>
     </linearGradient>
+
+    <!-- bottom bar gradient -->
+    <linearGradient id="bottomBar" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%"   stop-color="#1e293b" stop-opacity="0"/>
+      <stop offset="20%"  stop-color="#1e293b" stop-opacity="1"/>
+      <stop offset="80%"  stop-color="#1e293b" stop-opacity="1"/>
+      <stop offset="100%" stop-color="#1e293b" stop-opacity="0"/>
+    </linearGradient>
+
+    <!-- green glow -->
+    <filter id="greenGlow">
+      <feGaussianBlur stdDeviation="30"/>
+    </filter>
+    <filter id="cyanGlow">
+      <feGaussianBlur stdDeviation="22"/>
+    </filter>
+
+    <!-- grid pattern -->
+    <pattern id="grid" x="0" y="0" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#1e293b" stroke-width="0.5"/>
+    </pattern>
+
+    <!-- grid fade mask -->
+    <linearGradient id="gridMask" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%"   stop-color="white" stop-opacity="0"/>
+      <stop offset="15%"  stop-color="white" stop-opacity="1"/>
+      <stop offset="85%"  stop-color="white" stop-opacity="1"/>
+      <stop offset="100%" stop-color="white" stop-opacity="0"/>
+    </linearGradient>
+    <mask id="gridFade">
+      <rect width="800" height="140" fill="url(#gridMask)"/>
+    </mask>
   </defs>
 
-  <!-- clean white background -->
-  <rect width="800" height="140" fill="#ffffff"/>
+  <!-- dark base -->
+  <rect width="800" height="140" class="bg-rect"/>
 
-  <!-- very subtle blue tint top-left blob -->
-  <ellipse cx="100" cy="30" rx="160" ry="60" fill="#3b82f6" opacity="0.03"/>
-  <!-- very subtle right blob -->
-  <ellipse cx="700" cy="110" rx="160" ry="60" fill="#6366f1" opacity="0.03"/>
+  <!-- grid overlay -->
+  <rect width="800" height="140" fill="url(#grid)" mask="url(#gridFade)" opacity="0.6"/>
+
+  <!-- ambient glows -->
+  <ellipse cx="120" cy="70" rx="200" ry="80" fill="#4ade80" opacity="0.06" filter="url(#greenGlow)"/>
+  <ellipse cx="680" cy="70" rx="180" ry="80" fill="#22d3ee" opacity="0.07" filter="url(#cyanGlow)"/>
+  <ellipse cx="400" cy="140" rx="300" ry="50" fill="#4ade80" opacity="0.03" filter="url(#greenGlow)"/>
 
   <!-- top accent bar -->
   <rect x="0" y="0" width="800" height="2" fill="url(#topBar)"/>
 
+  <!-- left bracket accent -->
+  <text x="32" y="82" font-family="'Space Mono', monospace" font-size="52" fill="#4ade80" opacity="0.12" font-weight="700">{</text>
+  <!-- right bracket accent -->
+  <text x="742" y="82" font-family="'Space Mono', monospace" font-size="52" fill="#22d3ee" opacity="0.12" font-weight="700">}</text>
+
   <!-- greeting -->
-  <text x="400" y="38" class="greeting" text-anchor="middle">HI THERE, I'M</text>
+  <text x="400" y="34" class="greeting" text-anchor="middle">// HI THERE, I'M</text>
 
-  <!-- name -->
-  <text x="400" y="82" class="name" text-anchor="middle">Andrew Baldonado</text>
+  <!-- name with gradient -->
+  <text x="400" y="80" text-anchor="middle"
+        font-family="'Syne', 'Georgia', serif"
+        font-size="38"
+        font-weight="800"
+        letter-spacing="-1"
+        fill="url(#nameGrad)">Andrew Baldonado</text>
 
-  <!-- typewriter -->
-  <text x="400" y="110" class="tw1" text-anchor="middle">Software Developer</text>
-  <text x="400" y="110" class="tw2" text-anchor="middle">VB.Net</text>
-  <text x="400" y="110" class="tw3" text-anchor="middle">Web</text>
-  <text x="400" y="110" class="tw4" text-anchor="middle">Embedded Systems</text>
-  <text x="400" y="110" class="tw5" text-anchor="middle">Full-Stack to Hardware</text>
+  <!-- typewriter line with prompt symbol -->
+  <text x="272" y="110" class="prompt-symbol">›</text>
+
+  <text x="288" y="110" class="tw1">Software Developer</text>
+  <text x="288" y="110" class="tw2">VB.Net Developer</text>
+  <text x="288" y="110" class="tw3">Web Engineer</text>
+  <text x="288" y="110" class="tw4">Embedded Systems</text>
+  <text x="288" y="110" class="tw5">Full-Stack to Hardware</text>
 
   <!-- cursor -->
-  <rect x="510" y="97" width="2" height="14" class="cursor"/>
+  <rect x="510" y="98" width="2" height="14" class="cursor"/>
 
-  <!-- bottom fade line -->
-  <line x1="0" y1="135" x2="800" y2="135" stroke="url(#bottomLine)" stroke-width="1"/>
+  <!-- bottom line -->
+  <line x1="0" y1="137" x2="800" y2="137" stroke="url(#bottomBar)" stroke-width="1"/>
 
+  <!-- corner dots -->
+  <circle cx="12" cy="12" r="2" fill="#4ade80" opacity="0.5"/>
+  <circle cx="788" cy="12" r="2" fill="#22d3ee" opacity="0.5"/>
+  <circle cx="12" cy="128" r="2" fill="#4ade80" opacity="0.3"/>
+  <circle cx="788" cy="128" r="2" fill="#22d3ee" opacity="0.3"/>
 </svg>
