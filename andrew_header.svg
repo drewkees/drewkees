@@ -1,14 +1,20 @@
-<svg width="800" height="110" viewBox="0 0 800 110" xmlns="http://www.w3.org/2000/svg">
+<svg width="800" height="140" viewBox="0 0 800 140" xmlns="http://www.w3.org/2000/svg">
   <defs>
     <style>
-      .name     { font-family: 'Segoe UI', sans-serif; font-size: 28px; font-weight: 700; fill: #1a1a2e; }
-      .greeting { font-family: 'Segoe UI', sans-serif; font-size: 28px; font-weight: 400; fill: #555; }
-      .cursor   { fill: #4f46e5; animation: blink 0.8s step-end infinite; }
+      @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;600;700&amp;family=DM+Mono&amp;display=swap');
+
+      .greeting { font-family: 'DM Sans', 'Segoe UI', sans-serif; font-size: 13px; font-weight: 400; fill: #94a3b8; letter-spacing: 3px; }
+      .name     { font-family: 'DM Sans', 'Segoe UI', sans-serif; font-size: 36px; font-weight: 700; fill: #0f172a; }
+      .cursor   { fill: #3b82f6; animation: blink 0.8s step-end infinite; }
+
       @keyframes blink { 0%,100%{opacity:1;} 50%{opacity:0;} }
 
-      .tw1,.tw2,.tw3,.tw4,.tw5 { font-family: 'Courier New', monospace; font-size: 16px; fill: #4f46e5; }
-
-      /* Total cycle: 50s, each phrase gets 10s (8s visible, 2s transition) */
+      .tw1,.tw2,.tw3,.tw4,.tw5 {
+        font-family: 'DM Mono', 'Courier New', monospace;
+        font-size: 14px;
+        fill: #3b82f6;
+        letter-spacing: 1px;
+      }
 
       .tw1 { animation: tw1 50s linear infinite; }
       @keyframes tw1 {
@@ -18,7 +24,6 @@
         20%   { clip-path: inset(0 100% 0 0); opacity: 0; }
         100%  { clip-path: inset(0 100% 0 0); opacity: 0; }
       }
-
       .tw2 { animation: tw2 50s linear infinite; }
       @keyframes tw2 {
         0%    { clip-path: inset(0 100% 0 0); opacity: 0; }
@@ -29,7 +34,6 @@
         40%   { clip-path: inset(0 100% 0 0); opacity: 0; }
         100%  { clip-path: inset(0 100% 0 0); opacity: 0; }
       }
-
       .tw3 { animation: tw3 50s linear infinite; }
       @keyframes tw3 {
         0%    { clip-path: inset(0 100% 0 0); opacity: 0; }
@@ -40,7 +44,6 @@
         60%   { clip-path: inset(0 100% 0 0); opacity: 0; }
         100%  { clip-path: inset(0 100% 0 0); opacity: 0; }
       }
-
       .tw4 { animation: tw4 50s linear infinite; }
       @keyframes tw4 {
         0%    { clip-path: inset(0 100% 0 0); opacity: 0; }
@@ -51,7 +54,6 @@
         80%   { clip-path: inset(0 100% 0 0); opacity: 0; }
         100%  { clip-path: inset(0 100% 0 0); opacity: 0; }
       }
-
       .tw5 { animation: tw5 50s linear infinite; }
       @keyframes tw5 {
         0%    { clip-path: inset(0 100% 0 0); opacity: 0; }
@@ -62,21 +64,50 @@
         100%  { clip-path: inset(0 100% 0 0); opacity: 0; }
       }
     </style>
+
+    <linearGradient id="topBar" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%"   stop-color="#3b82f6" stop-opacity="0"/>
+      <stop offset="40%"  stop-color="#3b82f6" stop-opacity="0.8"/>
+      <stop offset="60%"  stop-color="#6366f1" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#6366f1" stop-opacity="0"/>
+    </linearGradient>
+
+    <linearGradient id="bottomLine" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%"   stop-color="#e2e8f0" stop-opacity="0"/>
+      <stop offset="20%"  stop-color="#e2e8f0" stop-opacity="1"/>
+      <stop offset="80%"  stop-color="#e2e8f0" stop-opacity="1"/>
+      <stop offset="100%" stop-color="#e2e8f0" stop-opacity="0"/>
+    </linearGradient>
   </defs>
 
-  <rect width="800" height="110" fill="#ffffff"/>
-  <rect x="0" y="0" width="800" height="3" fill="#4f46e5" opacity="0.75"/>
+  <!-- clean white background -->
+  <rect width="800" height="140" fill="#ffffff"/>
 
-  <text y="54">
-    <tspan x="40" class="greeting">Hi there, I'm </tspan><tspan class="name">Andrew Baldonado</tspan>
-  </text>
+  <!-- very subtle blue tint top-left blob -->
+  <ellipse cx="100" cy="30" rx="160" ry="60" fill="#3b82f6" opacity="0.03"/>
+  <!-- very subtle right blob -->
+  <ellipse cx="700" cy="110" rx="160" ry="60" fill="#6366f1" opacity="0.03"/>
 
-  <text x="40" y="86" class="tw1">💻 Software Developer</text>
-  <text x="40" y="86" class="tw2">🌐 VB.Net</text>
-  <text x="40" y="86" class="tw3">🕸️ Web</text>
-  <text x="40" y="86" class="tw4">🔧 Embedded Systems</text>
-  <text x="40" y="86" class="tw5">⚡ Full-Stack to Hardware</text>
+  <!-- top accent bar -->
+  <rect x="0" y="0" width="800" height="2" fill="url(#topBar)"/>
 
-  <rect x="232" y="72" width="2" height="16" class="cursor"/>
+  <!-- greeting -->
+  <text x="400" y="38" class="greeting" text-anchor="middle">HI THERE, I'M</text>
+
+  <!-- name -->
+  <text x="400" y="82" class="name" text-anchor="middle">Andrew Baldonado</text>
+
+  <!-- typewriter -->
+  <text x="400" y="110" class="tw1" text-anchor="middle">Software Developer</text>
+  <text x="400" y="110" class="tw2" text-anchor="middle">VB.Net</text>
+  <text x="400" y="110" class="tw3" text-anchor="middle">Web</text>
+  <text x="400" y="110" class="tw4" text-anchor="middle">Embedded Systems</text>
+  <text x="400" y="110" class="tw5" text-anchor="middle">Full-Stack to Hardware</text>
+
+  <!-- cursor -->
+  <rect x="510" y="97" width="2" height="14" class="cursor"/>
+
+  <!-- bottom fade line -->
+  <line x1="0" y1="135" x2="800" y2="135" stroke="url(#bottomLine)" stroke-width="1"/>
 
 </svg>
