@@ -6,6 +6,7 @@
 > [![Portfolio](https://img.shields.io/badge/Visit%20My%20Portfolio-000000?style=for-the-badge&logo=vercel&logoColor=white)](https://andrewbdev.vercel.app/)
 
 ---
+![Visitor Count](https://komarev.com/ghpvc/?username=drewkees&style=for-the-badge&color=4ade80&label=PROFILE+VIEWS)
 
 ## 🛠️ Tech Stack
 
@@ -31,19 +32,19 @@
 
 ## 📈 Contribution Graph
 
-![Activity Graph](https://github-readme-activity-graph.vercel.app/graph?username=acbaldonado&theme=tokyo-night)
+![Activity Graph](https://github-readme-activity-graph.vercel.app/graph?username=drewkees&theme=tokyo-night)
 
 ---
 
 ## 🏆 GitHub Trophies
 
-![Trophies](https://github-trophies.vercel.app/?username=acbaldonado&theme=tokyonight&no-frame=true)
+![Trophies](https://github-trophies.vercel.app/?username=drewkees&theme=tokyonight&no-frame=true)
 
 ---
 
 ## 🔥 Streak
 
-![GitHub Streak](https://streak-stats.demolab.com?user=acbaldonado&theme=tokyonight)
+![GitHub Streak](https://streak-stats.demolab.com?user=drewkees&theme=tokyonight)
 
 ---
 
