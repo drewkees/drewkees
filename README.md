@@ -1,4 +1,4 @@
-![Header](./andrew_header.svg)
+![Header](./andrew-header.svg)
 
 ## 🌐 Portfolio
 
